@@ -38,19 +38,19 @@ function Registration({user}) {
       })
     }
 
-  function windowReload() {
-    const reloadCount = sessionStorage.getItem('reloadCount');
-    if(reloadCount < 2) {
-      sessionStorage.setItem('reloadCount', String(reloadCount + 1));
-      window.location.reload();
-    } else {
-      sessionStorage.removeItem('reloadCount');
-    }
-  }
+//   function windowReload() {
+//     const reloadCount = sessionStorage.getItem('reloadCount');
+//     if(reloadCount < 2) {
+//       sessionStorage.setItem('reloadCount', String(reloadCount + 1));
+//       window.location.reload();
+//     } else {
+//       sessionStorage.removeItem('reloadCount');
+//     }
+//   }
 
   return <>
     <div style={{backgroundColor: 'javascript(void)eee'}}>
-      <div className="container py-5"onLoad={()=> windowReload()} >
+      <div className="container py-5">
         <div>
           <Form>
           <div className="d-flex justify-content-center w-100">
