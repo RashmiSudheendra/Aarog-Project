@@ -83,7 +83,7 @@ function Profile({detailuser}) {
                   <p className="mb-0">Phone</p>
                 </div>
                 <div className="">
-                <Form.Control id='userPhone' plaintext type="text" placeholder="Enter Mobile" defaultValue={detailuser[0].phone}/>
+                <Form.Control id='userPhone' plaintext type="number" placeholder="Enter Mobile" defaultValue={detailuser[0].phone}/>
                 </div>
               </div>
               <hr className='border border-info border-1'/>
@@ -92,7 +92,7 @@ function Profile({detailuser}) {
                   <p className="mb-0">Age</p>
                 </div>
                 <div className="">
-                <Form.Control id='userAge' plaintext type="text" placeholder="Age" defaultValue={detailuser[0].age}/>
+                <Form.Control id='userAge' plaintext type="number" placeholder="Age" defaultValue={detailuser[0].age}/>
                 </div>
               </div>
               <hr className='border border-info border-1'/>
