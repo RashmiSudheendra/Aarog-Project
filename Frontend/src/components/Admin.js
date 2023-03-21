@@ -45,6 +45,7 @@ function Admin(users) {
     let res = await data.json();
     console.log(res);
     windowReload()
+    navigate('/admin')
   }
   
 
