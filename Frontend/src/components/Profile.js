@@ -74,7 +74,7 @@ function Profile({detailuser}) {
                   <p className="mb-0">Email</p>
                 </div>
                 <div className="">
-                <Form.Control id='userEmail' plaintext type="text" placeholder="Enter Email" defaultValue={detailuser[0].email}/>
+                <Form.Control id='userEmail' plaintext type="text" placeholder="Enter Email" defaultValue={detailuser[0].email} readOnly/>
                 </div>
               </div>
               <hr className='border border-info border-1'/>
