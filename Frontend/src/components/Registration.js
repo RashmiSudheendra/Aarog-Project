@@ -38,19 +38,19 @@ function Registration({user}) {
       })
     }
 
-//   function windowReload() {
-//     const reloadCount = sessionStorage.getItem('reloadCount');
-//     if(reloadCount < 2) {
-//       sessionStorage.setItem('reloadCount', String(reloadCount + 1));
-//       window.location.reload();
-//     } else {
-//       sessionStorage.removeItem('reloadCount');
-//     }
-//   }
+  function windowReload() {
+    const reloadCount = sessionStorage.getItem('reloadCount');
+    if(reloadCount < 2) {
+      sessionStorage.setItem('reloadCount', String(reloadCount + 1));
+      window.location.reload();
+    } else {
+      sessionStorage.removeItem('reloadCount');
+    }
+  }
 
   return <>
     <div style={{backgroundColor: 'javascript(void)eee'}}>
-      <div className="container py-5">
+      <div className="container py-5"onLoad={()=> windowReload()} >
         <div>
           <Form>
           <div className="d-flex justify-content-center w-100">
@@ -74,7 +74,7 @@ function Registration({user}) {
                   <p className="mb-0">Email</p>
                 </div>
                 <div className="">
-                <Form.Control id='userEmail' plaintext type="text" placeholder="Enter Email" defaultValue={user.email}/>
+                <Form.Control id='userEmail' plaintext type="text" placeholder="Enter Email" defaultValue={user.email} readOnly/>
                 </div>
               </div>
               <hr className='border border-info border-1'/>
@@ -83,7 +83,7 @@ function Registration({user}) {
                   <p className="mb-0">Phone</p>
                 </div>
                 <div className="">
-                <Form.Control id='userPhone' plaintext type="text" placeholder="Enter Mobile" defaultValue={user.phone}/>
+                <Form.Control id='userPhone' plaintext type="number" placeholder="Enter Mobile" defaultValue={user.phone}/>
                 </div>
               </div>
               <hr className='border border-info border-1'/>
@@ -92,7 +92,7 @@ function Registration({user}) {
                   <p className="mb-0">Age</p>
                 </div>
                 <div className="">
-                <Form.Control id='userAge' plaintext type="text" placeholder="Age" defaultValue={user.age}/>
+                <Form.Control id='userAge' plaintext type="number" placeholder="Age" defaultValue={user.age}/>
                 </div>
               </div>
               <hr className='border border-info border-1'/>
