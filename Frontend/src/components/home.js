@@ -9,15 +9,15 @@ function Home({user}) {
 
   let navigate = useNavigate()
 
-  function windowReload() {
-    const reloadCount = sessionStorage.getItem('reloadCount');
-    if(reloadCount < 2) {
-      sessionStorage.setItem('reloadCount', String(reloadCount + 1));
-      window.location.reload();
-    } else {
-      sessionStorage.removeItem('reloadCount');
-    }
-  }
+//   function windowReload() {
+//     const reloadCount = sessionStorage.getItem('reloadCount');
+//     if(reloadCount < 2) {
+//       sessionStorage.setItem('reloadCount', String(reloadCount + 1));
+//       window.location.reload();
+//     } else {
+//       sessionStorage.removeItem('reloadCount');
+//     }
+//   }
 
 
   // let context = useContext(SignInContext)
@@ -49,9 +49,9 @@ function Home({user}) {
 
   return <>
     <div className="container">
-      <div className='d-flex flex-row align-item-center justify-content-center m-5' onLoad={()=> windowReload()}>
+      <div className='d-flex flex-row align-item-center justify-content-center m-5'>
       <div className="card border-0 shadow rounded-3 mt-5 w-100 d-flex flex-column align-items-center justify-content-center">
-        <h2 className='mt-3' onLoad={()=> windowReload()}>Welcome {uD[0].name}</h2>
+        <h2 className='mt-3'>Welcome {uD[0].name}</h2>
         <Image src={uD[0].picture} roundedCircle width="100"></Image>
         <h2 className='w-75'> <hr className='border border-info border-1'/></h2> 
         <h3>{uD[0].email} / {uD[0].phone}</h3>
