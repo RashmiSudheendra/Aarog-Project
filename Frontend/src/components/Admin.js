@@ -26,15 +26,15 @@ function Admin(users) {
   //   console.table(e);
   // })
 
-  function windowReload() {
-    const reloadCount = sessionStorage.getItem('reloadCount');
-    if(reloadCount < 2) {
-      sessionStorage.setItem('reloadCount', String(reloadCount + 1));
-      window.location.reload();
-    } else {
-      sessionStorage.removeItem('reloadCount');
-    }
-  }
+//   function windowReload() {
+//     const reloadCount = sessionStorage.getItem('reloadCount');
+//     if(reloadCount < 2) {
+//       sessionStorage.setItem('reloadCount', String(reloadCount + 1));
+//       window.location.reload();
+//     } else {
+//       sessionStorage.removeItem('reloadCount');
+//     }
+//   }
 
   async function deleteNewUserData(i) {
     console.log('deleted')
@@ -44,7 +44,7 @@ function Admin(users) {
     });
     let res = await data.json();
     console.log(res);
-    windowReload()
+//     windowReload()
     navigate('/admin')
   }
   
