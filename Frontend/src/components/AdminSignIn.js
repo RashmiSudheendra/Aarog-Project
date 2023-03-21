@@ -22,12 +22,12 @@ function AdminSignIn() {
       <div className="container">
         <div className="row">
           <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div className="card border-0 shadow rounded-3 my-5">
-              <div className="card-body p-4 p-sm-5">
-                <h5 className="card-title text-center mb-3 fw-bold fs-5">
+            <div className="card border-0 shadow rounded-3 mt-5">
+              <div className="card-body d-flex justify-content-center flex-column">
+                <h5 className="card-title text-center mb-2 fw-bold fs-5">
                   Enter the Admin password to Sign In
                 </h5>
-                <hr className="border border-info border-1 my-2" />
+                <hr className="border border-info border-3 mb-3 mt-2" />
                 <div className="form-floating mb-3">
                   <input
                     id="adminpw"
@@ -37,15 +37,16 @@ function AdminSignIn() {
                   />
                   <label htmlFor="floatingPassword">Password</label>
                 </div>
-                <div className="d-grid">
+                <div className="d-flex justify-content-center mx-3">
                   <button
-                    className="btn btn-primary btn-login text-uppercase fw-bold"
+                    className="btn btn-info btn-login text-uppercase fw-bold"
                     type="submit"
                     onClick={() => loginAsAdmin()}
                   >
                     Sign In
                   </button>
                 </div>
+                <h6 className="text-center m-3"><i>Admin Password : Admin1234</i></h6>
               </div>
             </div>
           </div>
