@@ -1,11 +1,3 @@
-// import logo from './logo.svg';
-
-// 49538352252-98fab0tj827sl5enk4frf4nh9q1kiaqb.apps.googleusercontent.com  --  client ID for google login
-// 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 -- secret ID for goole login
-
-// aarog client 1070159888086-bb0bq4oj2gkqrrdnn3b1egmnhmg5rq4a.apps.googleusercontent.com -- client ID for google login
-// aarog client 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 -- secret ID for goole login
-
 import './App.css';
 import Signin from './components/signin';
 import Home from './components/home';
